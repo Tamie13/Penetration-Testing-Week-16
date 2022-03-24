@@ -66,11 +66,13 @@ Altoro Mutual wants to ensure that private information that is unavailable on th
     
     - Although Altoro Mutual does not mention their executive members on the website a brief search of their `"about"` page shows clickable link to their `Executive & Management Team`:
      
-    - ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Exec_Management%20Page.png)
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Exec_Management%20Page.png)
+
 
 **Google Search Results**
 
-    - ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Google%20Search.png)
+ 
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Google%20Search.png)
 
 
 #### Question Two
