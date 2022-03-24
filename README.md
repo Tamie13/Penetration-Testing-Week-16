@@ -61,14 +61,14 @@ Please note throughout this assignment, you will target a website named "Altoro 
 Altoro Mutual wants to ensure that private information that is unavailable on their public website cannot be found by searching the web.
 - For example, Altoro Mutual does not mention their executive memembers on the website. 
   
-### Question One
+#### Question One
 - Using Google, can you identify who the Chief Executive Officer?
     
     - Although Altoro Mutual does not mention their executive members on the website a brief search of their `"about"` page shows clickable link to:
       - [Executive & Managment Team](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Exec_Management%20Page.png)
       - [Google Search Results](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Google%20Search.png)
 
-### Question Two
+#### Question Two
 -  How can this information be helpful to an attacker?
     - The search results of the companies about page as well as the results of the google search are a hackers dream for comprising a list of high level executive targets to send phishing attacks to via email.
 
@@ -83,17 +83,20 @@ Altoro Mutual wants to ensure that private information that is unavailable on th
 -  Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the following questions based on the results:
 
     
-### Question Three
+#### Question Three
 
 -  Where is the company located?
 
 
+#### Question Four
 -  What is the NetRange IP address?
 
 
+#### Question Five
 -  What is the company they use to store their infrastructure?
 
 
+#### Question Six
 -  What is the IP address of the DNS server?
 
 
