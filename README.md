@@ -1,8 +1,8 @@
 # Penetration-Testing-Week-16
 
-Week 16 Homework: Penetration Testing 1
 
-Scenario
+**Scenario**
+
 In this assignment, you will work as a recently hired security analyst at Altoro Mutual, a banking service.
 
 
@@ -56,40 +56,49 @@ Please note throughout this assignment, you will target a website named "Altoro 
 
 -  As you complete the steps below, please record your answers in the Submission.md file. You will submit this file as your homework deliverable.
 
-`Step 1: Google Dorking`
--  Altoro Mutual wants to ensure that private information that is unavailable on their public website cannot be found by searching the web.
-    - For example, Altoro Mutual does not mention their executive remembers on the website. Using Google, can you identify who the Chief Executive Officer?
+## `Step 1: Google Dorking`
 
+Altoro Mutual wants to ensure that private information that is unavailable on their public website cannot be found by searching the web.
+- For example, Altoro Mutual does not mention their executive memembers on the website. 
+  
+### Question One
+- Using Google, can you identify who the Chief Executive Officer?
+    
+    - Although Altoro Mutual does not mention their executive members on the website a brief search of their `"about"` page shows clickable link to:
+      - [Executive & Managment Team](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Exec_Management%20Page.png)
+      - [Google Search Results](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Google%20Search.png)
+
+### Question Two
 -  How can this information be helpful to an attacker?
+    - The search results of the companies about page as well as the results of the google search are a hackers dream for comprising a list of high level executive targets to send phishing attacks to via email.
 
 
+## `Step 2: DNS and Domain Discovery`
 
-`Step 2: DNS and Domain Discovery`
-
--  The reconnaissance phase of a penetration test is possibly the most important phase of the engagement. Without a clear understanding of your client's          assets, vulnerabilities can go unnoticed and later exploited.
+-  The reconnaissance phase of a penetration test is possibly the most important phase of the engagement. Without a clear understanding of your client's assets, vulnerabilities can go unnoticed and later exploited.
 
 
 -  `Navigate to centralops.net`
 
-
 -  Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the following questions based on the results:
 
-    - Where is the company located?
+    
+### Question Three
+
+-  Where is the company located?
 
 
-    - What is the NetRange IP address?
+-  What is the NetRange IP address?
 
 
-    - What is the company they use to store their infrastructure?
+-  What is the company they use to store their infrastructure?
 
 
-    - What is the IP address of the DNS server?
-
-
+-  What is the IP address of the DNS server?
 
 
 
-Step 3: Shodan
+## Step 3: Shodan
 Using Shodan and the information gathered from Google Dorking, find any other useful information that can be used in an attack.
 
 
