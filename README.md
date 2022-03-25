@@ -145,21 +145,23 @@ Run the module.
 
 **What is the vulnerability?**
     
-    -  As can be seen in `Scan One` and `Scan Two` above **`Zenmap`** was able to successfully enumerate a vulnerability through ports 139/445.  The vulnerability is            identified as CVE-2011-2523 with a CVSS score of **10**
+ As can be seen in `Scan One` and `Scan Two` above
+ **Zenmap** was able to successfully enumerate a vulnerability through ports 139/445.  The vulnerability is identified as CVE-2011-2523 with a CVSS score of 
+ **10**
 
 **Why is it dangerous?**
 
--  `CVE-2011-2523` is very dangerous because it contains a backdoor that opens a shell on port 6200/tcp.
-    -  **Impacts of this vulnerability can be seen below**
-    -  
+`CVE-2011-2523` is very dangerous because it contains a backdoor that opens a shell on port 6200/tcp.
+ **Impacts of this vulnerability can be seen below**
+ 
         
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Impact.png)
 
         
 **What are your recommendations for the client to protect their server?**
 
-    -  Vulnerabilities on both SMB Ports 139/445 creates a severe risk combination to the transport layer.  If these vulnerabilities are found on a clients server they should be mitigated immediately. Recommendations made by the 
-`National Cyber Awareness System` for [SMB Security Best Practices](https://www.cisa.gov/uscert/ncas/current-activity/2017/01/16/SMB-Security-Best-Practices) to mitigate risk inclued:
+Vulnerabilities on both SMB Ports 139/445 creates a severe risk combination to the transport layer.  If these vulnerabilities are found on a clients server they should be mitigated immediately. Recommendations made by the `National Cyber Awareness System` for
+[SMB Security Best Practices](https://www.cisa.gov/uscert/ncas/current-activity/2017/01/16/SMB-Security-Best-Practices) to mitigate risk inclued:
 
     -  disabling SMBv1 and
     -  blocking all versions of SMB at the network boundary by blocking TCP port 445 with related protocols on UDP ports        137-138 and TCP port 139, for all                boundary devices.
