@@ -164,8 +164,8 @@ Run the module.
 Vulnerabilities on both SMB Ports 139/445 creates a severe risk combination to the transport layer.  If these vulnerabilities are found on a clients server they should be mitigated immediately. Recommendations made by the `National Cyber Awareness System` for
 [SMB Security Best Practices](https://www.cisa.gov/uscert/ncas/current-activity/2017/01/16/SMB-Security-Best-Practices) to mitigate risk include:
 
-    -  disabling SMBv1 and
-    -  blocking all versions of SMB at the network boundary by blocking TCP port 445 with related protocols on UDP ports        137-138 and TCP port 139, for all                boundary devices.
+-  disabling SMBv1 and
+-  blocking all versions of SMB at the network boundary by blocking TCP port 445 with related protocols on UDP ports      137-138 and TCP port 139, for all boundary devices.
 
 
 
