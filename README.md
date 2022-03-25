@@ -128,13 +128,18 @@ Run the module.
 -  Use Zenmap's scripting engine to identify a vulnerability associated with the service running on the 139/445 port from your previous scan.
 -  Once you have identified this vulnerability, answer the following questions for your client:
 
-*Scan One*
+**Scan One**
+
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/1st%20Zenmap%20Scan.png)
 
-*Scan Two*
+
+**Scan Two**
+
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/2nd%20zenmap%20scan.png)
 
-*Vulnerability Level*
+
+**Vulnerability Level**
+
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Vulnerability%20High.png)
 
 
