@@ -56,17 +56,17 @@ Please note throughout this assignment, you will target a website named "Altoro 
 
 -  As you complete the steps below, please record your answers in the Submission.md file. You will submit this file as your homework deliverable.
 
-## `Step 1: Google Dorking`
+## Google Dorking
 
 Altoro Mutual wants to ensure that private information that is unavailable on their public website cannot be found by searching the web.
-- For example, Altoro Mutual does not mention their executive memembers on the website. 
-  
-#### Question One
-- Using Google, can you identify who the Chief Executive Officer?
     
-    - Although Altoro Mutual does not mention their executive members on the website a brief search of their `"about"` page shows clickable link to their `Executive & Management Team`:
-     
+A brief search on Google and short exploration of Altoro Mutual's `"about"` page revealed that a great deal of valuable information can be found by an attacker or potential threat actor. 
+
+
+**About Page Results**
+
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Exec_Management%20Page.png)
+
 
 
 **Google Search Results**
@@ -75,54 +75,44 @@ Altoro Mutual wants to ensure that private information that is unavailable on th
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Google%20Search.png)
 
 
-#### Question Two
--  How can this information be helpful to an attacker?
-    - The search results of the companies about page as well as the results of the google search are a hackers dream for comprising a list of high level executive targets to send phishing attacks to via email.
+
+-  **How can this information be helpful to an attacker?**
+    - The search results of the companies about page as well as the results of the google search are a hackers dream for comprising a       list of high level executive targets to send phishing attacks to via email.
 
 
-## `Step 2: DNS and Domain Discovery`
+## DNS and Domain Discovery
 
--  The reconnaissance phase of a penetration test is possibly the most important phase of the engagement. Without a clear understanding of your client's assets, vulnerabilities can go unnoticed and later exploited.
-
-
--  `Navigate to centralops.net`
-
--  Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the following questions based on the results:
-
-    
-#### Question Three
-
--  Where is the company located?
+The reconnaissance phase of a penetration test is possibly the most important phase of the engagement. Without a clear understanding of your client's assets, vulnerabilities can go unnoticed and later exploited.
 
 
-#### Question Four
--  What is the NetRange IP address?
+Using `centralops.net` the following information was revealed by running demo.testfire.net in `Domain Dossier.`
 
 
-#### Question Five
--  What is the company they use to store their infrastructure?
+-  The company location:
+    - `Sunnyvale, CA 94085 - USA`
 
 
-#### Question Six
--  What is the IP address of the DNS server?
+-  Their NetRange IP address:
+    - `65.61.137.64 - 65.61.137.127`
+
+-  Who they use to store their infrastructure:
+
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Server%20Host.png)
 
 
-
-## Step 3: Shodan
-Using Shodan and the information gathered from Google Dorking, find any other useful information that can be used in an attack.
-
-
-Navigate to shodan.io.
+-  The IP address of the DNS server:
+    - `65.61.137.117`
 
 
-Run a scan against the IP address of the DNS server for demo.testfire.net.
+## Shodan.io
 
-What open ports and running services did Shodan find?
+By running the DNS server for demo.testfire.net that was found using Google Dorking we were able to see the following open ports and services.
+
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Open%20Ports%20%26%20Services.png)
 
 
+## Recon-ng
 
-
-Step 4: Recon-ng
 Altoro Mutual is also concerned about cross-site scripting attacks, which can cause havoc on their website. Verify whether or not Altoro Mutual is vulnerable to XSS by completing the following:
 
 Install the Recon module xssed.
