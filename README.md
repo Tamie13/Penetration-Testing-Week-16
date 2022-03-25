@@ -1,19 +1,15 @@
 # Penetration-Testing-Week-16
 
+Unit 16 HW Submission File: Penetration Testing
 
 **Scenario**
 
-In this assignment, you will work as a recently hired security analyst at Altoro Mutual, a banking service.
+-  In this assignment, you will work as a recently hired security analyst at Altoro Mutual, a banking service.
+-  Concerned about their online presence and the security of their website demo.testfire.net, they have hired you to evaluate the        security posture of their operations.
+-  As a holder very sensitive customer and financial data, Altoro Mutual is worried malicious actors compromising their website anf      gaining this information.
+-  You are tasked with performing website enumeration, discovery, and vulnerability detection. Because this engagement is non-          invasive, you will not try to hack into their system. Rather, you will discover any potential vulnerabilities or leaks that the      company should be worried about.
+-  Please note throughout this assignment, you will target a website named "Altoro Mutual" located at demo.testfire.net. Altoro          Mutual was designed by IBM, a company that designs both hardware and software for computers. Their website demo.testfire.net was      specifically designed to detect web application vulnerabilities.
 
-
-Concerned about their online presence and the security of their website demo.testfire.net, they have hired you to evaluate the security posture of their operations.
-
-
-As a holder very sensitive customer and financial data, Altoro Mutual is worried malicious actors compromising their website anf gaining this information.
-
-
-You are tasked with performing website enumeration, discovery, and vulnerability detection. Because this engagement is non-invasive, you will not try to hack into their system. Rather, you will discover any potential vulnerabilities or leaks that the company should be worried about.
-Please note throughout this assignment, you will target a website named "Altoro Mutual" located at demo.testfire.net. Altoro Mutual was designed by IBM, a company that designs both hardware and software for computers. Their website demo.testfire.net was specifically designed to detect web application vulnerabilities.
 
 **Topics Covered in This Assignment**
 
@@ -52,15 +48,11 @@ Note: Your Kali machine will act as the attacker machine, and the Metasploitable
 Please note throughout this assignment, you will target a website named "Altoro Mutual" located at demo.testfire.net. Altoro Mutual was designed by IBM, a company that designs both hardware and software for computers. Their website demo.testfire.net was specifically designed to detect web application vulnerabilities.
 
 
-**Instructions:**
-
--  As you complete the steps below, please record your answers in the Submission.md file. You will submit this file as your homework deliverable.
-
-## Google Dorking
+## Test 1: Google Dorking
 
 Altoro Mutual wants to ensure that private information that is unavailable on their public website cannot be found by searching the web.
     
-A brief search on Google and short exploration of Altoro Mutual's `"about"` page revealed that a great deal of valuable information can be found by an attacker or potential threat actor. 
+A brief search on Google and short exploration of Altoro Mutual's `"about"` page revealed that a great deal of valuable information is not private and can be found by an attacker or potential threat actor easily.
 
 
 **About Page Results**
@@ -77,10 +69,10 @@ A brief search on Google and short exploration of Altoro Mutual's `"about"` page
 
 
 -  **How can this information be helpful to an attacker?**
-    - The search results of the companies about page as well as the results of the google search are a hackers dream for comprising a       list of high level executive targets to send phishing attacks to via email.
+    - A short exploration of the companies about page as well as a brief search of google yielded a wealth of information that could       be used by a hackers or potential threat actor to target high level executive with phishing attacks via email.
 
 
-## DNS and Domain Discovery
+## Step 2: DNS and Domain Discovery
 
 The reconnaissance phase of a penetration test is possibly the most important phase of the engagement. Without a clear understanding of your client's assets, vulnerabilities can go unnoticed and later exploited.
 
@@ -99,47 +91,70 @@ Using `centralops.net` the following information was revealed by running demo.te
 
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Server%20Host.png)
 
-
 -  The IP address of the DNS server:
     - `65.61.137.117`
 
 
-## Shodan.io
+## Test 3: Shodan.io
 
-By running the DNS server for demo.testfire.net that was found using Google Dorking we were able to see the following open ports and services.
+-  What open ports and running services did Shodan find?
+    - Port 80 - Apache Tomcat/Coyote - HTTP
+    - Port 443 - Apache Tomcat/Coyote - HTTPS
+    - Port 8080 - Apache Tomcat/Coyote - HTTP
 
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Open%20Ports%20%26%20Services.png)
 
 
-## Recon-ng
+## Test 4: Recon-ng
 
-Altoro Mutual is also concerned about cross-site scripting attacks, which can cause havoc on their website. Verify whether or not Altoro Mutual is vulnerable to XSS by completing the following:
+*Altoro Mutual is also concerned about cross-site scripting attacks, which can cause havoc on their website. Verify whether or not Altoro Mutual is vulnerable to XSS by completing the following:*
 
-Install the Recon module xssed.
-Set the source to demo.testfire.net.
+Install the Recon module `xssed`
+Set the source to `demo.testfire.net`
 Run the module.
 
-Is Altoro Mutual vulnerable to XSS?
+*`Is Altoro Mutual vulnerable to XSS?`*
 
-Step 5: Zenmap
-Your client has asked that you help identify any vulnerabilities with their file-sharing server. Using the Metasploitable machine to act as your client's server, complete the following:
+**Yes, see image below.**
 
-
-Use Zenmap to run a service scan against the Metasploitable machine.
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Recon-ng%20Vulnerability.png)
 
 
-Bonus: In the same command, output the results into a new text file named zenmapscan.txt.
+## Test 5: Zenmap
+
+-  Your client has asked that you help identify any vulnerabilities with their file-sharing server. Using the Metasploitable machine to act as your client's server, complete the following:
+-  Use Zenmap to run a service scan against the Metasploitable machine.
+-  Bonus: In the same command, output the results into a new text file named zenmapscan.txt.
+-  Use Zenmap's scripting engine to identify a vulnerability associated with the service running on the 139/445 port from your previous scan.
+-  Once you have identified this vulnerability, answer the following questions for your client:
+
+*Scan One*
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/1st%20Zenmap%20Scan.png)
+
+*Scan Two*
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/2nd%20zenmap%20scan.png)
+
+*Vulnerability Level*
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Vulnerability%20High.png)
 
 
+**What is the vulnerability?**
+    -  As can be seen in `Scan One` and `Scan Two` above **`Zenmap`** was able to successfully enumerate a vulnerability through ports 139/445.  The vulnerability is identified as CVE-2011-2523 with a CVSS score of **10**
 
-Use Zenmap's scripting engine to identify a vulnerability associated with the service running on the 139/445 port from your previous scan.
+**Why is it dangerous?**
 
+    -  `CVE-2011-2523` is very dangerous because it contains a backdoor that opens a shell on port 6200/tcp.
+        -  **Impacts of this vulnerability can be seen below**
+        
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Impact.png)
+        
+**What are your recommendations for the client to protect their server?**
 
-Once you have identified this vulnerability, answer the following questions for your client:
+    -  Vulnerabilities on both SMB Ports 139/445 creates a severe risk combination to the transport layer.  If these vulnerabilities are found on a clients server they should be mitigated immediately. Recommendations made by the 
+`National Cyber Awareness System` for [SMB Security Best Practices](https://www.cisa.gov/uscert/ncas/current-activity/2017/01/16/SMB-Security-Best-Practices) to mitigate risk inclued:
 
-What is the vulnerability?
-Why is it dangerous?
-What are your recommendations for the client to protect their server?
+    -  disabling SMBv1 and
+    -  blocking all versions of SMB at the network boundary by blocking TCP port 445 with related protocols on UDP ports        137-138 and TCP port 139, for all boundary devices.
 
 
 
