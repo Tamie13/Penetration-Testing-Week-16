@@ -128,37 +128,25 @@ Run the module.
 -  Use Zenmap's scripting engine to identify a vulnerability associated with the service running on the 139/445 port from your previous scan.
 -  Once you have identified this vulnerability, answer the following questions for your client:
 
-**Scan One**
+**Zenmap Scan**
 
-![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/1st%20Zenmap%20Scan.png)
-
-
-**Scan Two**
-
-![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/2nd%20zenmap%20scan.png)
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/zenmap%20scan%20one.png)
 
 
 **Vulnerability Level**
 
-![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Vulnerability%20High.png)
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Vulnerability%20Info.png)
 
 
 **What is the vulnerability?**
     
- As can be seen in `Scan One` and `Scan Two` above
- **Zenmap** was able to successfully enumerate a vulnerability through ports 139/445.  The vulnerability is identified as CVE-2011-2523 with a CVSS score of 
- **10**
+`CVE-2007-2447`
 
 **Why is it dangerous?**
 
-`CVE-2011-2523` is very dangerous because it contains a backdoor that opens a shell on port 6200/tcp.
+"The MS-RPC functionality in smbd in Samba 3.0.0 through 3.0.25rc3 allows remote attackers to execute arbitrary commands via shell metacharacters involving the (1) SamrChangePassword function, when the "username map script" smb.conf option is enabled, and allows remote authenticated users to execute commands via shell metacharacters involving other MS-RPC functions in the (2) remote printer and (3) file share management."
  
- **Impacts of this vulnerability can be seen below**
- 
-        
-![TODO](https://github.com/Tamie13/Penetration-Testing-Week-16/blob/main/Images%20and%20Documents/Impact.png)
-
-        
+    
 **What are your recommendations for the client to protect their server?**
 
 Vulnerabilities on both SMB Ports 139/445 creates a severe risk combination to the transport layer.  If these vulnerabilities are found on a clients server they should be mitigated immediately. Recommendations made by the `National Cyber Awareness System` for
